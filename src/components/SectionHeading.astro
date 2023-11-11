@@ -1,0 +1,10 @@
+---
+const { heading } = Astro.props
+---
+
+<div class="max-w-[900px] mx-auto" data-aos="fade-in">
+  <h2 class="text-4xl text-accent-content font-bold text-center">{heading}</h2>
+  <p class="flex-1 text-xl mt-2 text-center max-w-[900px] mx-auto">
+    <slot />
+  </p>
+</div>

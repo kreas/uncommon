@@ -1,0 +1,20 @@
+---
+const { image } = Astro.props
+---
+
+<div class={`flex mt-24 justify-end`}>
+  <div
+    class={`w-[95%] h-[350px] bg-base-200 rounded rounded-2xl shadow-xl bg-cover flex justify-start`}
+    style={`background-image: url('/images/${image}')`}
+    data-aos="fade-in"
+    data-aos-easing="ease-in-sine"
+  >
+    <div
+      class={`bg-base-200 h-[370px] w-[500px] relative top-[30px] left-[-95px] p-8 rounded rounded-3xl shadow-xl`}
+      data-aos={'fade-right'}
+      data-aos-easing="ease-in-sine"
+    >
+      <slot />
+    </div>
+  </div>
+</div>

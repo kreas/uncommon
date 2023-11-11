@@ -1,0 +1,199 @@
+---
+import Layout from '@/components/Layout.astro'
+import ProcessStep from '@/components/ProcessStep.astro'
+import SectionHeading from '@/components/SectionHeading.astro'
+import ServiceCard from '@/components/ServiceCard.astro'
+import Study from '@/components/Study.astro'
+import StudyAlt from '@/components/StudyAlt.astro'
+import LinkButton from '@/components/forms/LinkButton.astro'
+---
+
+<Layout>
+  <section id="hero" class="rounded rounded-3xl bg-base-200">
+    <div
+      class="bg-black p-8 px-24 rounded rounded-3xl flex min-h-[600px] items-center shadow-lg bg-opacity-40 backdrop-blur-[1px] backdrop-saturate-0"
+    >
+      <div class="flex-1 mb-6">
+        <h1 class="text-4xl font-bold text-accent-content">Transforming businesses with AI-powered automation.</h1>
+        <p class="text-lg mt-3 text-accent-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem obcaecati veniam laudantium eius cupiditate
+          reprehenderit est soluta aperiam sapiente itaque omnis fugiat, error odio molestiae molestias totam explicabo
+          iure labore?
+        </p>
+        <div class="mt-6 flex gap-4">
+          <a
+            href=""
+            class="btn capitalize text-lg bg-accent-content text-base-300 rounded rounded-full hover:text-accent-content"
+            >Let's get started</a
+          >
+          <a href="" class="btn btn-ghost capitalize text-lg font-normal rounded rounded-full text-accent-content"
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <div class="flex-1"></div>
+    </div>
+  </section>
+
+  <section id="partners" class="text-center mt-36 flex flex-col items-center">
+    <SectionHeading heading="Empowering automation on the top platforms">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, dolorem eligendi excepturi provident quis
+      repudiandae reprehenderit debitis.
+    </SectionHeading>
+
+    <div class="grid grid-cols-3 gap-8 mt-12 w-full max-w-[1200px]">
+      <div
+        class="card bg-base-100 shadow-xl h-[200px]"
+        data-aos="fade-in"
+        data-aos-delay="200"
+        data-aos-easing="ease-in-sine"
+      >
+        <h3>Company</h3>
+      </div>
+      <div
+        class="card bg-base-100 shadow-xl h-[200px]"
+        data-aos="fade-in"
+        data-aos-delay="200"
+        data-aos-easing="ease-in-sine"
+      >
+        <h3>Company</h3>
+      </div>
+      <div
+        class="card bg-base-100 shadow-xl h-[200px]"
+        data-aos="fade-in"
+        data-aos-delay="300"
+        data-aos-easing="ease-in-sine"
+      >
+        <h3>Company</h3>
+      </div>
+      <div
+        class="card bg-base-100 shadow-xl h-[200px]"
+        data-aos="fade-in"
+        data-aos-delay="400"
+        data-aos-easing="ease-in-sine"
+      >
+        <h3>Company</h3>
+      </div>
+      <div
+        class="card bg-base-100 shadow-xl h-[200px]"
+        data-aos="fade-in"
+        data-aos-delay="500"
+        data-aos-easing="ease-in-sine"
+      >
+        <h3>Company</h3>
+      </div>
+      <div
+        class="card bg-base-100 shadow-xl h-[200px]"
+        data-aos="fade-in"
+        data-aos-delay="600"
+        data-aos-easing="ease-in-sine"
+      >
+        <h3>Company</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="mt-36 flex flex-col max-w-[1400px] mx-auto">
+    <SectionHeading heading="Empowering automation on the top platforms">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, dolorem eligendi excepturi provident quis
+      repudiandae reprehenderit debitis.
+    </SectionHeading>
+
+    <div class="flex gap-16 mt-16">
+      <div class="flex-1 flex flex-col gap-8 max-w-[600px]">
+        <ServiceCard label="Card 1" class="mr-20">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </ServiceCard>
+        <ServiceCard label="Card 2" class="ml-20" delay="100">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </ServiceCard>
+        <ServiceCard label="Card 3" class="mr-20" delay="200">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </ServiceCard>
+      </div>
+      <div class="flex flex-1 gap-8" data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease-in-sine">
+        <div class="card bg-base-100 flex-1 shadow-xl bg-[url('/images/card-bg-light-1.webp')] bg-cover">
+          <div class="bg-black bg-opacity-10 h-full rounded rounded-xl p-4 text-black font-bold text-xl">Text</div>
+        </div>
+        <div class="flex-1 flex gap-8 flex-col">
+          <div class="card bg-base-100 flex-1 shadow-xl bg-[url('/images/card-bg-2.png')] bg-cover bg-center">
+            <div
+              class="bg-white bg-opacity-20 h-full rounded rounded-xl p-4 text-black font-bold text-xl backdrop-saturate-50"
+            >
+              Text
+            </div>
+          </div>
+          <div class="card bg-base-100 flex-1 shadow-xl bg-[url('/images/card-bg-3.png')] bg-cover bg-center">
+            <div
+              class="bg-white bg-opacity-20 h-full rounded rounded-xl p-4 text-black font-bold text-xl backdrop-saturate-50"
+            >
+              Text
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="mt-36">
+    <SectionHeading heading="Our process">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, dolorem eligendi excepturi provident quis
+      repudiandae reprehenderit debitis.
+    </SectionHeading>
+
+    <div class="flex gap-24 mt-20 max-w-[1400px] mx-auto">
+      <ProcessStep label="Collect Ideas">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt non perferendis qui vel unde ullam ratione
+        aperiam provident totam, ad nobis ipsum molestias laudantium doloribus ex? Repellendus quasi sapiente fugiat.
+      </ProcessStep>
+      <ProcessStep label="Collect Ideas">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt non perferendis qui vel unde ullam ratione
+        aperiam provident totam, ad nobis ipsum molestias laudantium doloribus ex? Repellendus quasi sapiente fugiat.
+      </ProcessStep>
+      <ProcessStep label="Collect Ideas">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt non perferendis qui vel unde ullam ratione
+        aperiam provident totam, ad nobis ipsum molestias laudantium doloribus ex? Repellendus quasi sapiente fugiat.
+      </ProcessStep>
+    </div>
+  </section>
+
+  <section id="example-project" class="mt-36 max-w-[1400px] mx-auto">
+    <SectionHeading heading="Ways we can help">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, dolorem eligendi excepturi provident quis
+      repudiandae reprehenderit debitis.
+    </SectionHeading>
+
+    <Study image="bg-studies-4.png">Test</Study>
+    <StudyAlt image="bg-studies-5.png">Test</StudyAlt>
+    <Study image="bg-studies-6.png">Test</Study>
+  </section>
+
+  <section id="get-started" class="mt-36">
+    <div
+      class="bg-base-300 ronuded-rounded-3xl max-w-[1400px] rounded rounded-xl p-8 mx-auto min-h-[250px] flex items-center flex justify-between px-40"
+    >
+      <h2 class="text-3xl font-bold">Let's make something great together.</h2>
+      <div>
+        <LinkButton href="/contact" class="">Contact us</LinkButton>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  #hero {
+    background-image: url('/images/hero-bg.png');
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+
+<script>
+  window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY
+    const elem = document.getElementById('hero')!
+    elem.style.setProperty('background-position-y', `-${scrollPosition / 1.5}px`)
+  })
+</script>
