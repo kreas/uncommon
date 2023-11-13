@@ -1,32 +1,34 @@
 ---
 import Layout from '@/components/Layout.astro'
+import PlatformCard from '@/components/PlatformCard.astro'
 import ProcessStep from '@/components/ProcessStep.astro'
 import SectionHeading from '@/components/SectionHeading.astro'
 import ServiceCard from '@/components/ServiceCard.astro'
+import LinkButton from '@/components/forms/LinkButton.astro'
+import ServiceExample from '@/components/ServiceExample.astro'
 import Study from '@/components/Study.astro'
 import StudyAlt from '@/components/StudyAlt.astro'
-import LinkButton from '@/components/forms/LinkButton.astro'
 ---
 
 <Layout>
   <section id="hero" class="rounded rounded-3xl bg-base-200">
-    <div
-      class="bg-black p-8 px-24 rounded rounded-3xl flex min-h-[600px] items-center shadow-lg bg-opacity-40 backdrop-blur-[1px] backdrop-saturate-0"
-    >
-      <div class="flex-1 mb-6">
+    <div class="p-8 px-24 rounded rounded-3xl flex min-h-[80vh] items-center shadow-lg">
+      <div class="flex-1 mb-6 backdrop-blur-[2px]">
         <h1 class="text-4xl font-bold text-accent-content">Transforming businesses with AI-powered automation.</h1>
         <p class="text-lg mt-3 text-accent-content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem obcaecati veniam laudantium eius cupiditate
-          reprehenderit est soluta aperiam sapiente itaque omnis fugiat, error odio molestiae molestias totam explicabo
-          iure labore?
+          Uncommon harnesses the transformative power of AI and advanced automation to revolutionize business
+          operations. We deliver tailor-made, intelligent solutions that drive efficiency, innovation, and growth in a
+          rapidly evolving digital landscape.
         </p>
         <div class="mt-6 flex gap-4">
           <a
             href=""
-            class="btn capitalize text-lg bg-accent-content text-base-300 rounded rounded-full hover:text-accent-content"
-            >Let's get started</a
+            class="btn btn-lg capitalize bg-accent-content text-base-300 rounded rounded-full hover:text-accent-content"
+            >Expolore AI Solutions</a
           >
-          <a href="" class="btn btn-ghost capitalize text-lg font-normal rounded rounded-full text-accent-content"
+          <a
+            href=""
+            class="btn btn-lg btn-ghost bg-base-200 hover:bg-base-300 bg-opacity-40 text-lg capitalize font-semibold rounded rounded-full text-accent-content"
             >Learn more</a
           >
         </div>
@@ -36,164 +38,153 @@ import LinkButton from '@/components/forms/LinkButton.astro'
   </section>
 
   <section id="partners" class="text-center mt-36 flex flex-col items-center">
-    <SectionHeading heading="Empowering automation on the top platforms">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, dolorem eligendi excepturi provident quis
-      repudiandae reprehenderit debitis.
+    <SectionHeading heading="Elevating Innovation on the Top AI Platforms">
+      Our approach combines the advantages of advanced generative AI, robust cloud computing, sophisticated analytics,
+      and state-of-the-art natural language processing technologies. This enables us to convert challenges into smart,
+      automated solutions.
     </SectionHeading>
 
     <div class="grid grid-cols-3 gap-8 mt-12 w-full max-w-[1200px]">
-      <div
-        class="card bg-base-100 shadow-xl h-[200px]"
-        data-aos="fade-in"
-        data-aos-delay="200"
-        data-aos-easing="ease-in-sine"
-      >
-        <h3>Company</h3>
-      </div>
-      <div
-        class="card bg-base-100 shadow-xl h-[200px]"
-        data-aos="fade-in"
-        data-aos-delay="200"
-        data-aos-easing="ease-in-sine"
-      >
-        <h3>Company</h3>
-      </div>
-      <div
-        class="card bg-base-100 shadow-xl h-[200px]"
-        data-aos="fade-in"
-        data-aos-delay="300"
-        data-aos-easing="ease-in-sine"
-      >
-        <h3>Company</h3>
-      </div>
-      <div
-        class="card bg-base-100 shadow-xl h-[200px]"
-        data-aos="fade-in"
-        data-aos-delay="400"
-        data-aos-easing="ease-in-sine"
-      >
-        <h3>Company</h3>
-      </div>
-      <div
-        class="card bg-base-100 shadow-xl h-[200px]"
-        data-aos="fade-in"
-        data-aos-delay="500"
-        data-aos-easing="ease-in-sine"
-      >
-        <h3>Company</h3>
-      </div>
-      <div
-        class="card bg-base-100 shadow-xl h-[200px]"
-        data-aos="fade-in"
-        data-aos-delay="600"
-        data-aos-easing="ease-in-sine"
-      >
-        <h3>Company</h3>
-      </div>
+      <PlatformCard>
+        <img src="/images/logos/OpenAI_Logo.png" alt="OpenAI" />
+      </PlatformCard>
+
+      <PlatformCard>
+        <img src="/images/logos/MicrosoftAzureLogo.png" alt="Microsoft Azure" />
+      </PlatformCard>
+
+      <PlatformCard>
+        <img src="/images/logos/GCP.png" alt="Google Cloud Platform" />
+      </PlatformCard>
+
+      <PlatformCard>
+        <img src="/images/logos/databricks.png" alt="Databricks" />
+      </PlatformCard>
+
+      <PlatformCard>
+        <img src="/images/logos/watsonx.png" alt="IBM WatsonX" />
+      </PlatformCard>
+
+      <PlatformCard>
+        <img src="/images/logos/AWS.png" alt="Amazon Web Service" class="h-[75px] mx-auto" />
+      </PlatformCard>
     </div>
   </section>
 
   <section id="services" class="mt-36 flex flex-col max-w-[1400px] mx-auto">
-    <SectionHeading heading="Empowering automation on the top platforms">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, dolorem eligendi excepturi provident quis
-      repudiandae reprehenderit debitis.
+    <SectionHeading heading="AI Solutions to Propel Your Business Forward">
+      Uncommon builds intelligent automation solutions that redefine efficiency and drive competitive advantage.
+      Leveraging the latest in AI technology, we turn cutting-edge concepts into real-world applications.
     </SectionHeading>
 
     <div class="flex gap-16 mt-16">
       <div class="flex-1 flex flex-col gap-8 max-w-[600px]">
-        <ServiceCard label="Card 1" class="mr-20">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        <ServiceCard label="Automated Worklow Optimization" class="mr-20">
+          Streamline your operations with our AI-driven workflow optimization, reducing costs and enhancing productivity
+          with smart automation tailored to your business processes."
         </ServiceCard>
-        <ServiceCard label="Card 2" class="ml-20" delay="100">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        <ServiceCard label="Predictive Analytics and Data Insights" class="ml-20" delay="100">
+          Harness the predictive power of AI to unlock actionable insights from your data, enabling informed
+          decision-making and a proactive approach to market dynamics.
         </ServiceCard>
-        <ServiceCard label="Card 3" class="mr-20" delay="200">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        <ServiceCard label="Custom AI Solutions Development" class="mr-20" delay="200">
+          Collaborate with us to develop bespoke AI solutions, from natural language processing to advanced image
+          recognition, designed to meet the unique challenges of your enterprise.
         </ServiceCard>
       </div>
       <div class="flex flex-1 gap-8" data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease-in-sine">
-        <div class="card bg-base-100 flex-1 shadow-xl bg-[url('/images/card-bg-light-1.webp')] bg-cover">
-          <div class="bg-black bg-opacity-10 h-full rounded rounded-xl p-4 text-black font-bold text-xl">Text</div>
-        </div>
+        <ServiceExample image="bg-opt-1.png">
+          AI automation of sales outreach via HubSpot has streamlined client engagement, yielding higher conversion
+          rates and more efficient lead management.
+        </ServiceExample>
         <div class="flex-1 flex gap-8 flex-col">
-          <div class="card bg-base-100 flex-1 shadow-xl bg-[url('/images/card-bg-2.png')] bg-cover bg-center">
-            <div
-              class="bg-white bg-opacity-20 h-full rounded rounded-xl p-4 text-black font-bold text-xl backdrop-saturate-50"
-            >
-              Text
-            </div>
-          </div>
-          <div class="card bg-base-100 flex-1 shadow-xl bg-[url('/images/card-bg-3.png')] bg-cover bg-center">
-            <div
-              class="bg-white bg-opacity-20 h-full rounded rounded-xl p-4 text-black font-bold text-xl backdrop-saturate-50"
-            >
-              Text
-            </div>
-          </div>
+          <ServiceExample image="bg-opt-3.png">
+            AI-driven support automation has enhanced customer satisfaction by providing personalized assistance,
+            significantly reducing resolution times.
+          </ServiceExample>
+          <ServiceExample image="bg-opt-6.png">
+            Computer vision system enhances helps quality control by automating defect detection and improving overall
+            production efficiency.
+          </ServiceExample>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="process" class="mt-36">
-    <SectionHeading heading="Our process">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, dolorem eligendi excepturi provident quis
-      repudiandae reprehenderit debitis.
+  <section id="process" class="mt-48">
+    <SectionHeading heading="Strategic AI Development">
+      Empowering your growth with a meticulous and adaptive AI development process, we tailor cutting-edge solutions to
+      meet your business needs, ensuring seamless integration today and scalable innovation for tomorrow."
     </SectionHeading>
 
-    <div class="flex gap-24 mt-20 max-w-[1400px] mx-auto">
-      <ProcessStep label="Collect Ideas">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt non perferendis qui vel unde ullam ratione
-        aperiam provident totam, ad nobis ipsum molestias laudantium doloribus ex? Repellendus quasi sapiente fugiat.
+    <div class="flex gap-24 mt-20 max-w-[1400px] mx-auto items-top">
+      <ProcessStep label="Planning">
+        We begin with in-depth discovery to pinpoint your challenges and objectives, resulting in a detailed AI roadmap
+        tailored to your business's unique landscape.
       </ProcessStep>
-      <ProcessStep label="Collect Ideas">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt non perferendis qui vel unde ullam ratione
-        aperiam provident totam, ad nobis ipsum molestias laudantium doloribus ex? Repellendus quasi sapiente fugiat.
+      <ProcessStep label="Buidling">
+        Our development is agile and focused, rapidly deploying a bespoke AI solution that integrates seamlessly with
+        your operations, followed by iterative improvements for a perfect fit.
       </ProcessStep>
-      <ProcessStep label="Collect Ideas">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt non perferendis qui vel unde ullam ratione
-        aperiam provident totam, ad nobis ipsum molestias laudantium doloribus ex? Repellendus quasi sapiente fugiat.
+      <ProcessStep label="Optimizing">
+        Post-deployment, we continually refine and enhance your AI systems, leveraging performance data to optimize
+        processes and ensure long-term, scalable success.
       </ProcessStep>
     </div>
   </section>
 
-  <section id="example-project" class="mt-36 max-w-[1400px] mx-auto">
-    <SectionHeading heading="Ways we can help">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, dolorem eligendi excepturi provident quis
-      repudiandae reprehenderit debitis.
+  <section id="example-project" class="mt-48 max-w-[1400px] mx-auto">
+    <SectionHeading heading="Ways We Help Innovate">
+      Our expertise in Generative AI, NLP, and Data Analytics allows us to develop innovative solutions that surpass
+      industry standards. By using advanced technology and algorithms, we revolutionize business operations in today's
+      evolving landscape.
     </SectionHeading>
 
-    <Study image="bg-studies-4.png">Test</Study>
-    <StudyAlt image="bg-studies-5.png">Test</StudyAlt>
-    <Study image="bg-studies-6.png">Test</Study>
+    <Study image="bg-studies-8.png" heading="Natural Language Processing">
+      Transform your data into a wellspring of innovation with our Natural Language Processing expertise. By deciphering
+      nuances and extracting key patterns from complex data, we empower you to pioneer new strategies and elevate your
+      market solutions.
+    </Study>
+
+    <StudyAlt image="bg-studies-4.png" heading="Generative AI">
+      Harness the innovative power of Generative AI to pioneer new products, services, and experiences. Our technology
+      interprets trends and generates novel concepts, turning the once-impossible into practical solutions that open up
+      new avenues for business growth.
+    </StudyAlt>
+    <Study image="bg-studies-7.png" heading="Data Analytics">
+      Discover hidden layers of insight with our Data Analytics services. We delve beyond the surface to reveal not only
+      the salient facts but also the latent trends within your data, fueling informed decisions and foresightful
+      strategies for your business.
+    </Study>
   </section>
 
-  <section id="get-started" class="mt-36">
+  <section id="get-started" class="mt-40">
     <div
       class="bg-base-300 ronuded-rounded-3xl max-w-[1400px] rounded rounded-xl p-8 mx-auto min-h-[250px] flex items-center flex justify-between px-40"
     >
-      <h2 class="text-3xl font-bold">Let's make something great together.</h2>
+      <h2 class="text-3xl font-bold max-w-[30ch]">
+        Join us in shaping tomorrow's AI innovations <span class="underline">today</span>.
+      </h2>
       <div>
-        <LinkButton href="/contact" class="">Contact us</LinkButton>
+        <LinkButton href="/contact" class="">Let's get started</LinkButton>
       </div>
     </div>
   </section>
+
+  <style>
+    #hero {
+      background-image: url('/images/hero-bg-2.png');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var scrollPosition = window.scrollY
+      const elem = document.getElementById('hero')!
+      elem.style.setProperty('background-position-y', `-${scrollPosition / 1.55}px`)
+    })
+  </script>
 </Layout>
-
-<style>
-  #hero {
-    background-image: url('/images/hero-bg.png');
-    background-blend-mode: lighten;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
-
-<script>
-  window.addEventListener('scroll', function () {
-    var scrollPosition = window.scrollY
-    const elem = document.getElementById('hero')!
-    elem.style.setProperty('background-position-y', `-${scrollPosition / 1.5}px`)
-  })
-</script>

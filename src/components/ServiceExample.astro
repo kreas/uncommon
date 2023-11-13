@@ -1,0 +1,11 @@
+---
+const { image } = Astro.props
+---
+
+<div class="card bg-base-100 flex-1 shadow-xl bg-cover" style={`background-image: url('/images/${image}');`}>
+  <div class="h-full rounded rounded-xl text-white text-opacity-90">
+    <p class="bg-black bg-opacity-30 p-8 rounded rounded-xl font-semibold h-full" style="0 0 4px rgba(0, 0, 0, 0.8);">
+      <slot />
+    </p>
+  </div>
+</div>

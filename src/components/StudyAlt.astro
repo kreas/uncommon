@@ -1,20 +1,28 @@
 ---
-const { image } = Astro.props
+import LinkButton from './forms/LinkButton.astro'
+
+const { image, heading } = Astro.props
 ---
 
-<div class={`flex mt-24 justify-end`}>
+<div class={`flex mt-16 justify-end`}>
   <div
-    class={`w-[95%] h-[350px] bg-base-200 rounded rounded-2xl shadow-xl bg-cover flex justify-start`}
+    class={`background-motion w-[95%] h-[350px] bg-base-200 rounded rounded-2xl shadow-xl bg-cover flex justify-start`}
     style={`background-image: url('/images/${image}')`}
     data-aos="fade-in"
     data-aos-easing="ease-in-sine"
   >
     <div
-      class={`bg-base-200 h-[370px] w-[500px] relative top-[30px] left-[-95px] p-8 rounded rounded-3xl shadow-xl`}
+      class={`study-inner bg-base-300 bg-opacity-95 backdrop-blur-[2px] h-[350px] w-full max-w-[800px] relative top-[30px] left-[-95px] p-8 rounded rounded-3xl shadow-xl flex flex-col justify-center`}
       data-aos={'fade-right'}
       data-aos-easing="ease-in-sine"
     >
-      <slot />
+      <h3 class="text-xl font-semibold">{heading}</h3>
+      <p class="mt-2">
+        <slot />
+      </p>
+      <div class="text-right mt-6">
+        <LinkButton href="/about" class="btn btn-ghost">Learn More</LinkButton>
+      </div>
     </div>
   </div>
 </div>
