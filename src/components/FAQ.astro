@@ -1,13 +1,15 @@
 ---
-const { question } = Astro.props
+const { question, ...props } = Astro.props
 ---
 
 <div class="collapse collapse-arrow bg-base-200 join-item">
-  <input type="radio" name="faqs" />
-  <div class="collapse-title text-xl font-medium">
+  <input type="radio" name="faqs" {...props} />
+  <div class="collapse-title text-lg font-medium">
     {question}
   </div>
-  <div class="collapse-content">
-    <slot />
+  <div class="collapse-content bg-base-300 prose max-w-full">
+    <p class="mt-4">
+      <slot />
+    </p>
   </div>
 </div>

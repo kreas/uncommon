@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -7,7 +8,11 @@ export default {
 			'sans': ['Montserrat', 'sans-serif'],
 		}
 	},
-	plugins: [require('@tailwindcss/typography'), require("daisyui")],
+	plugins: [
+		require('@tailwindcss/typography'),
+		require("daisyui"),
+		require('tailwindcss-textshadow') 
+	],
 	daisyui: {
 		themes: ['dark'],
 	}

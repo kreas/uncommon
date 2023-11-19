@@ -1,7 +1,7 @@
 ---
 import LinkButton from './forms/LinkButton.astro'
 
-const { image, heading } = Astro.props
+const { image, heading, href } = Astro.props
 ---
 
 <div class={`flex mt-16 justify-end`}>
@@ -21,7 +21,7 @@ const { image, heading } = Astro.props
         <slot />
       </p>
       <div class="text-right mt-6">
-        <LinkButton href="/about" class="btn btn-ghost">Learn More</LinkButton>
+        <LinkButton href={href} class="btn btn-ghost">Learn More</LinkButton>
       </div>
     </div>
   </div>
