@@ -1,131 +1,121 @@
 ---
-import CTABar from '@/components/CTABar.astro'
+import Capability from '@/components/Capability.astro'
 import FAQ from '@/components/FAQ.astro'
 import FAQSection from '@/components/FAQSection.astro'
 import Layout from '@/components/Layout.astro'
 ---
 
 <Layout>
-  <div class="max-w-[1400px] mx-auto flex flex-row-reverse gap-12 relative mt-16">
-    <div class="w-3/4">
-      <div class="flex gap-4 justify-between border-b border-base-content pb-4 mb-4">
-        <span><strong class="text-sm">READ TIME:</strong> 4 minutes</span>
-        <span><strong class="text-sm">LAST UPDATED:</strong> November 15th, 2023</span>
-      </div>
-      <section class="prose flex-1 max-w-full">
-        <h1 class="hidden">Understanding NLP in Workflow Automation</h1>
-        <p class="mt-0">
-          In an era where efficiency and automation are at the forefront of business success, integrating Natural
-          Language Processing (NLP) into AI Workflow Automation represents a leap forward in operational excellence. At
-          Uncommon, we leverage NLP to transform unstructured data into actionable insights, driving smarter, more
-          efficient automated workflows.
-        </p>
-        <h2>Understanding NLP in Workflow Automation</h2>
-        <p>
-          At the intersection of artificial intelligence and linguistics lies Natural Language Processing (NLP) – a
-          revolutionary technology that enables machines to understand, interpret, and respond to human language in a
-          meaningful way. In the context of AI Workflow Automation, NLP acts as a bridge between human communication and
-          digital processes, turning textual and spoken data into actionable insights.
-        </p>
-        <h2>Transforming Data into Actionable Insights</h2>
-        <p>
-          NLP goes beyond mere data entry; it comprehends the nuances of human language, including context, sentiment,
-          and intent. This capability is crucial in business environments where decisions hinge on the understanding of
-          complex, language-rich data sources such as emails, reports, customer feedback, and social media content. By
-          interpreting this data accurately, NLP opens the door to more intelligent and responsive automated workflows.
-        </p>
-        <h2>Enhancing Automation with Human Language Understanding</h2>
-        <p>
-          The integration of NLP into workflow automation systems elevates these systems from rule-based task
-          executioners to intelligent assistants capable of handling nuanced language-based tasks. This includes:
-        </p>
-        <ul>
-          <li>
-            <strong>Automated Document Processing:</strong> NLP can read and extract relevant information from various
-            document types, streamlining data entry and analysis processes.
-          </li>
-          <li>
-            <strong>Intelligent Communication Systems:</strong> From automated customer service chatbots to smart email
-            filtering, NLP enables systems to interact with human language inputs effectively, ensuring more
-            personalized and efficient communication.
-          </li>
-          <li>
-            <strong>Advanced Analytics:</strong> By analyzing text data, NLP helps in uncovering trends, sentiments, and
-            patterns, essential for strategic decision-making.
-          </li>
-        </ul>
-        <h2>Bridging the Gap Between Human and Digital Interaction</h2>
-        <p>
-          The real power of NLP in workflow automation lies in its ability to bridge the gap between human communication
-          and digital processes. It allows businesses to automate complex tasks that were previously thought to require
-          human intervention. This not only speeds up operations but also reduces the potential for human error,
-          ensuring more accurate outcomes.
-        </p>
-        <h2>Uncommon's Expertise in Implementing NLP Solutions</h2>
-        <p>
-          At Uncommon, we specialize in harnessing the power of NLP to revolutionize your workflow automation. Our
-          expertise lies in custom-developing NLP solutions that are specifically tailored to your business needs.
-          Whether it's refining customer interactions, automating data-intensive tasks, or gleaning insights from
-          unstructured data, our team works closely with you to implement NLP technologies that drive efficiency,
-          accuracy, and innovation. By partnering with us, you leverage NLP to not only automate workflows but also to
-          create smarter, more intuitive systems that resonate with your operational dynamics and strategic objectives.
-        </p>
-        <h2>Conclusion</h2>
-        <p>
-          As businesses increasingly move towards digital transformation, the role of NLP in workflow automation becomes
-          more pronounced. By enabling machines to understand and process human language, NLP is not just an add-on but
-          a fundamental component that transforms how businesses operate, making workflows smarter, faster, and more
-          attuned to the intricacies of human communication.
-        </p>
-      </section>
-      <FAQSection>
-        <FAQ question="What is Natural Language Processing?" checked="checked">
-          NLP is a branch of artificial intelligence that enables machines to understand, interpret, and interact with
-          human language. In workflow automation, it's used to process language-based data, enhancing the efficiency and
-          intelligence of automated systems.
-        </FAQ>
-        <FAQ question="How does NLP improve workflow automation in businesses?">
-          NLP enhances workflow automation by automating language-dependent tasks such as data extraction from
-          documents, intelligent customer service interactions, and advanced text analytics. This leads to increased
-          efficiency, accuracy, and more personalized customer experiences.
-        </FAQ>
-        <FAQ question="Can NLP be integrated with existing business systems?">
-          Absolutely. NLP can be integrated into existing business workflows and systems, such as CRM, ERP, and customer
-          service platforms, to enhance their capabilities and automate complex, language-based tasks.
-        </FAQ>
-        <FAQ question="How does NLP handle different languages or industry-specific jargon?">
-          Modern NLP systems are trained on vast datasets and can handle multiple languages and specific terminologies.
-          They can be customized to understand and process industry-specific jargon, making them versatile for diverse
-          business needs.
-        </FAQ>
-        <FAQ question="Is NLP reliable for sensitive or critical business tasks?">
-          NLP has advanced significantly and is reliable for many sensitive tasks. However, its reliability depends on
-          the quality of the data it's trained on and the specific use case. For critical tasks, it's often used in
-          conjunction with human oversight.
-        </FAQ>
-        <FAQ question="How does NLP contribute to data-driven decision-making?">
-          NLP contributes by turning unstructured language data into structured, actionable insights. This helps
-          businesses understand customer sentiments, market trends, and operational inefficiencies, leading to more
-          informed decision-making.
-        </FAQ>
-      </FAQSection>
-    </div>
-    <div
-      class="rounded rounded-xl bg-[url('/images/background/bg-tall-01.png')] bg-cover bg-top-[30px] w-[500px] h-[500px] min-w-400 p-6 sticky top-[20px] justify-between flex flex-col gap-4"
-    >
-      <div>
-        <span class="text-white text-4xl font-bold text-shadow-xl leading-[130%] text-opacity-80">
-          Understanding NLP in Workflow Automation
-        </span>
-        <ul class="mt-4 text-white text-shadow-xl">
-          <li><strong>Read Time</strong>: 5 minutes</li>
-        </ul>
-      </div>
-      <audio controls class="w-full bg-opacity-40">
-        <source src="/audio/nlp.mp3" type="audio/mpeg" />
-         Your browser does not support the audio element.
-      </audio>
-    </div>
-  </div>
-  <CTABar />
+  <Capability
+    title="Natural Language Processing"
+    headline="Enhancing Operations with Natural Language Processing and Workflow Automation"
+    readTime="4 minutes"
+    publishDate="November 15th, 2023"
+    audio="/audio/nlp.mp3"
+    backgroundImage="/images/background/bg-tall-01.png"
+  >
+    <h2>The Role of NLP in Business Operations</h2>
+    <p>
+      In an era where efficiency and automation are crucial for business success, integrating Natural Language
+      Processing (NLP) into AI Workflow Automation is a significant advancement in operational excellence. At Uncommon,
+      we utilize NLP to convert unstructured data into actionable insights, enabling smarter and more efficient
+      automated workflows.
+    </p>
+
+    <h2>Understanding NLP in Workflow Automation</h2>
+    <p>
+      NLP is a revolutionary technology that sits at the intersection of artificial intelligence and linguistics. It
+      enables machines to understand, interpret, and respond to human language in a meaningful way. In the context of AI
+      Workflow Automation, NLP serves as a bridge between human communication and digital processes, transforming
+      textual and spoken data into actionable insights.
+    </p>
+
+    <h2>Converting Data into Actionable Insights</h2>
+    <p>
+      NLP goes beyond simple data entry. It understands the intricacies of human language, including context, sentiment,
+      and intent. This capability is essential in business environments where decisions rely on comprehending complex,
+      language-rich data sources like emails, reports, customer feedback, and social media content. By accurately
+      interpreting this data, NLP enables more intelligent and responsive automated workflows.
+    </p>
+
+    <h2>Improving Automation with Human Language Understanding</h2>
+    <p>
+      The integration of NLP into workflow automation systems enhances these systems from being rule-based task
+      executors to intelligent assistants capable of handling complex language-based tasks. This includes:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Automated Document Processing:</strong> NLP can read and extract relevant information from various
+        document types, simplifying data entry and analysis processes.
+      </li>
+      <li>
+        <strong>Intelligent Communication Systems:</strong> From automated customer service chatbots to smart email
+        filtering, NLP enables systems to effectively interact with human language inputs, ensuring more personalized
+        and efficient communication.
+      </li>
+      <li>
+        <strong>Advanced Analytics:</strong> By analyzing text data, NLP assists in identifying trends, sentiments, and
+        patterns, which are crucial for strategic decision-making.
+      </li>
+    </ul>
+
+    <h2>Connecting Humans and Digital Interaction</h2>
+    <p>
+      The true power of NLP in workflow automation lies in its capacity to connect human communication and digital
+      processes. It enables businesses to automate intricate tasks that were once believed to necessitate human
+      intervention. This not only accelerates operations but also minimizes the risk of human error, guaranteeing more
+      precise results.
+    </p>
+
+    <h2>Uncommon's Experience with NLP Solutions Implementation</h2>
+    <p>
+      At Uncommon, we specialize in harnessing the power of NLP to revolutionize workflow automation. Our expertise lies
+      in custom-developing NLP solutions tailored to your business needs. Whether it's refining customer interactions,
+      automating data-intensive tasks, or extracting insights from unstructured data, our team works closely with you to
+      implement NLP technologies that drive efficiency, accuracy, and innovation. Partnering with us allows you to
+      leverage NLP to automate workflows and create smarter, more intuitive systems that align with your operational
+      dynamics and strategic objectives.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      As businesses continue to embrace digital transformation, the significance of NLP in workflow automation becomes
+      even more evident. By enabling machines to comprehend and process human language, NLP is not merely an add-on, but
+      a crucial element that revolutionizes business operations. It makes workflows smarter, faster, and more attuned to
+      the nuances of human communication.
+    </p>
+
+    <FAQSection slot="faqs">
+      <FAQ question="What is Natural Language Processing?" checked="checked">
+        NLP is a branch of artificial intelligence that enables machines to understand, interpret, and interact with
+        human language. In workflow automation, it's used to process language-based data, enhancing the efficiency and
+        intelligence of automated systems.
+      </FAQ>
+      <FAQ question="How does NLP improve workflow automation in businesses?">
+        NLP enhances workflow automation by automating language-dependent tasks such as data extraction from documents,
+        intelligent customer service interactions, and advanced text analytics. This leads to increased efficiency,
+        accuracy, and more personalized customer experiences.
+      </FAQ>
+      <FAQ question="Can NLP be integrated with existing business systems?">
+        Absolutely. NLP can be integrated into existing business workflows and systems, such as CRM, ERP, and customer
+        service platforms, to enhance their capabilities and automate complex, language-based tasks.
+      </FAQ>
+      <FAQ question="How does NLP handle different languages or industry-specific jargon?">
+        Modern NLP systems are trained on vast datasets and can handle multiple languages and specific terminologies.
+        They can be customized to understand and process industry-specific jargon, making them versatile for diverse
+        business needs.
+      </FAQ>
+      <FAQ question="Is NLP reliable for sensitive or critical business tasks?">
+        NLP has advanced significantly and is reliable for many sensitive tasks. However, its reliability depends on the
+        quality of the data it's trained on and the specific use case. For critical tasks, it's often used in
+        conjunction with human oversight.
+      </FAQ>
+      <FAQ question="How does NLP contribute to data-driven decision-making?">
+        NLP contributes by turning unstructured language data into structured, actionable insights. This helps
+        businesses understand customer sentiments, market trends, and operational inefficiencies, leading to more
+        informed decision-making.
+      </FAQ>
+    </FAQSection>
+  </Capability>
 </Layout>
