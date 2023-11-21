@@ -4,7 +4,6 @@ import PlatformCard from '@/components/PlatformCard.astro'
 import ProcessStep from '@/components/ProcessStep.astro'
 import SectionHeading from '@/components/SectionHeading.astro'
 import ServiceCard from '@/components/ServiceCard.astro'
-import LinkButton from '@/components/forms/LinkButton.astro'
 import ServiceExample from '@/components/ServiceExample.astro'
 import Study from '@/components/Study.astro'
 import StudyAlt from '@/components/StudyAlt.astro'
@@ -13,15 +12,19 @@ import CTABar from '@/components/CTABar.astro'
 
 <Layout>
   <section id="hero" class="rounded rounded-3xl bg-base-200">
-    <div class="p-8 px-24 rounded rounded-3xl flex min-h-[80vh] items-center shadow-lg">
-      <div class="flex-1 mb-6 backdrop-blur-[2px]">
-        <h1 class="text-4xl font-bold text-accent-content">Transforming businesses with AI-powered automation.</h1>
-        <p class="text-lg mt-3 text-accent-content">
+    <div
+      class="p-8 py-12 md:px-24 rounded rounded-3xl flex flex-col lg:flex-row lg:min-h-[80vh] items-center shadow-lg items-middle"
+    >
+      <div class="flex-1 md:mb-6 backdrop-blur-[2px]">
+        <h1 class="text-2xl md:text-4xl font-bold text-accent-content">
+          Transforming businesses with AI-powered automation.
+        </h1>
+        <p class="md:text-lg mt-3 text-accent-content">
           Uncommon harnesses the transformative power of AI and advanced automation to revolutionize business
           operations. We deliver tailor-made, intelligent solutions that drive efficiency, innovation, and growth in a
           rapidly evolving digital landscape.
         </p>
-        <div class="mt-6 flex gap-4">
+        <div class="mt-6 flex flex-col md:flex-row gap-4">
           <a
             href=""
             class="btn btn-lg capitalize bg-accent-content text-base-300 rounded rounded-full hover:text-accent-content"
@@ -30,75 +33,66 @@ import CTABar from '@/components/CTABar.astro'
           <a
             href=""
             class="btn btn-lg btn-ghost bg-base-200 hover:bg-base-300 bg-opacity-40 text-lg capitalize font-semibold rounded rounded-full text-accent-content"
-            >Learn more</a
           >
+            Learn more
+          </a>
         </div>
       </div>
       <div class="flex-1"></div>
     </div>
   </section>
 
-  <section id="partners" class="text-center mt-36 flex flex-col items-center">
+  <section id="partners" class="text-center mt-20 md:mt-36 flex flex-col items-center">
     <SectionHeading heading="Elevating Innovation on the Top AI Platforms">
       Our approach combines the advantages of advanced generative AI, robust cloud computing, sophisticated analytics,
       and state-of-the-art natural language processing technologies. This enables us to convert challenges into smart,
       automated solutions.
     </SectionHeading>
 
-    <div class="grid grid-cols-3 gap-8 mt-12 w-full max-w-[1200px]">
-      <PlatformCard>
-        <img src="/images/logos/OpenAI_Logo.png" alt="OpenAI" />
-      </PlatformCard>
-
-      <PlatformCard>
-        <img src="/images/logos/MicrosoftAzureLogo.png" alt="Microsoft Azure" />
-      </PlatformCard>
-
-      <PlatformCard>
-        <img src="/images/logos/GCP.png" alt="Google Cloud Platform" />
-      </PlatformCard>
-
-      <PlatformCard>
-        <img src="/images/logos/databricks.png" alt="Databricks" />
-      </PlatformCard>
-
-      <PlatformCard>
-        <img src="/images/logos/watsonx.png" alt="IBM WatsonX" />
-      </PlatformCard>
-
-      <PlatformCard>
-        <img src="/images/logos/AWS.png" alt="Amazon Web Service" class="h-[75px] mx-auto" />
-      </PlatformCard>
+    <div
+      class="flex overflow-x-auto snap-x md:grid md:grid-cols-2 lg:grid-cols-3 pb-4 gap-2 md:gap-8 mt-8 md:mt-12 w-full max-w-[1200px]"
+    >
+      <PlatformCard src="/images/logos/OpenAI_Logo.png" alt="OpenAI" />
+      <PlatformCard src="/images/logos/MicrosoftAzureLogo.png" alt="Microsoft Azure" />
+      <PlatformCard src="/images/logos/GCP.png" alt="Google Cloud Platform" />
+      <PlatformCard src="/images/logos/databricks.png" alt="Databricks" />
+      <PlatformCard src="/images/logos/watsonx.png" alt="IBM WatsonX" />
+      <PlatformCard src="/images/logos/AWS.png" alt="Amazon Web Services" />
     </div>
   </section>
 
-  <section id="services" class="mt-36 flex flex-col max-w-[1400px] mx-auto">
+  <section id="services" class="mt-20 md:mt-36 flex flex-col max-w-[1400px] mx-auto">
     <SectionHeading heading="AI Solutions to Propel Your Business Forward">
       Uncommon builds intelligent automation solutions that redefine efficiency and drive competitive advantage.
       Leveraging the latest in AI technology, we turn cutting-edge concepts into real-world applications.
     </SectionHeading>
 
-    <div class="flex gap-16 mt-16">
-      <div class="flex-1 flex flex-col gap-8 max-w-[600px]">
-        <ServiceCard label="Automated Worklow Optimization" class="mr-20">
+    <div class="flex flex-col md:flex-row gap-16 mt-16">
+      <div class="flex-1 flex flex-col gap-4 lg:gap-8 lg:max-w-[600px]">
+        <ServiceCard label="Automated Worklow Optimization" class="md:mr-20">
           Streamline your operations with our AI-driven workflow optimization, reducing costs and enhancing productivity
           with smart automation tailored to your business processes."
         </ServiceCard>
-        <ServiceCard label="Predictive Analytics and Data Insights" class="ml-20" delay="100">
+        <ServiceCard label="Predictive Analytics and Data Insights" class="md:ml-20" delay="100">
           Harness the predictive power of AI to unlock actionable insights from your data, enabling informed
           decision-making and a proactive approach to market dynamics.
         </ServiceCard>
-        <ServiceCard label="Custom AI Solutions Development" class="mr-20" delay="200">
+        <ServiceCard label="Custom AI Solutions Development" class="md:mr-20" delay="200">
           Collaborate with us to develop bespoke AI solutions, from natural language processing to advanced image
           recognition, designed to meet the unique challenges of your enterprise.
         </ServiceCard>
       </div>
-      <div class="flex flex-1 gap-8" data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease-in-sine">
+      <div
+        class="flex flex-1 gap-8 hidden lg:flex"
+        data-aos="fade-in"
+        data-aos-duration="600"
+        data-aos-easing="ease-in-sine"
+      >
         <ServiceExample image="bg-opt-1.png">
           AI automation of sales outreach via HubSpot has streamlined client engagement, yielding higher conversion
           rates and more efficient lead management.
         </ServiceExample>
-        <div class="flex-1 flex gap-8 flex-col">
+        <div class="flex-1 hidden lg:flex gap-8 flex-col">
           <ServiceExample image="bg-opt-3.png">
             AI-driven support automation has enhanced customer satisfaction by providing personalized assistance,
             significantly reducing resolution times.
@@ -112,13 +106,13 @@ import CTABar from '@/components/CTABar.astro'
     </div>
   </section>
 
-  <section id="process" class="mt-48">
+  <section id="process" class="mt-20 md:mt-48">
     <SectionHeading heading="Strategic AI Development">
       Empowering your growth with a meticulous and adaptive AI development process, we tailor cutting-edge solutions to
       meet your business needs, ensuring seamless integration today and scalable innovation for tomorrow."
     </SectionHeading>
 
-    <div class="flex gap-24 mt-20 max-w-[1400px] mx-auto items-top">
+    <div class="flex flex-col md:flex-row gap-16 md:gap-24 mt-20 max-w-[1400px] mx-auto items-top">
       <ProcessStep label="Planning">
         We begin with in-depth discovery to pinpoint your challenges and objectives, resulting in a detailed AI roadmap
         tailored to your business's unique landscape.
@@ -134,7 +128,7 @@ import CTABar from '@/components/CTABar.astro'
     </div>
   </section>
 
-  <section id="example-project" class="mt-48 max-w-[1400px] mx-auto">
+  <section id="example-project" class="mt-20 md:mt-48 max-w-[1400px] mx-auto">
     <SectionHeading heading="Ways We Help Innovate">
       Our expertise in Generative AI, NLP, and Data Analytics allows us to develop innovative solutions that surpass
       industry standards. By using advanced technology and algorithms, we revolutionize business operations in today's

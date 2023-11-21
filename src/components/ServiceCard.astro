@@ -14,8 +14,8 @@ const { label, class: extendedClass, delay = '100' } = Astro.props
     </div>
   </div>
   <div>
-    <h3 class="text-lg font-semibold text-accent-content">{label}</h3>
-    <p>
+    <h3 class="text-lg font-semibold text-accent-content leading-6">{label}</h3>
+    <p class="text-sm md:text-base pt-2">
       <slot />
     </p>
   </div>

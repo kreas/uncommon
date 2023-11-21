@@ -5,18 +5,18 @@ const { image, heading, href } = Astro.props
 
 <div class={`flex mt-16 justify-start`}>
   <div
-    class={`background-motion w-[95%] h-[350px] bg-base-200 rounded rounded-2xl shadow-xl bg-cover flex justify-end bg-center`}
+    class={`background-motion w-[95%] h-[350px] bg-base-200 rounded-2xl shadow-xl bg-cover flex justify-end bg-cover md:bg-center`}
     style={`background-image: url('/images/${image}')`}
     data-aos="fade-in"
     data-aos-easing="ease-in-sine"
   >
     <div
-      class={`study-inner bg-base-300 bg-opacity-95 backdrop-blur-[2px] h-[350px] w-full max-w-[800px] relative top-[30px] right-[-95px] p-8 rounded rounded-3xl shadow-3xl flex flex-col justify-center`}
-      data-aos={'fade-left'}
+      class={`study-inner bg-base-300 bg-opacity-95 backdrop-blur-[2px] h-[350px] w-full max-w-[800px] relative top-[20px] md:top-[30px] right-[-20px] md:right-[-95px] p-8 rounded rounded-3xl shadow-3xl flex flex-col justify-center`}
+      data-aos={'fade-in'}
       data-aos-easing="ease-in-sine"
     >
       <h3 class="text-xl font-semibold">{heading}</h3>
-      <p class="mt-2">
+      <p class="mt-2 text-sm md:text-base">
         <slot />
       </p>
       <div class="text-right mt-4">
