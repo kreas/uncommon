@@ -2,29 +2,40 @@
 import LinkButton from './forms/LinkButton.astro'
 ---
 
-<nav class="flex px-2 py-8 max-w-[1400px] justify-between mx-auto text-xl items-center">
+<nav class="flex px-4 md:px-2 py-6 md:py-8 max-w-[1400px] justify-between mx-auto text-xl items-center">
   <a href="/" class="text-xl font-bold text-white">UN<span class="opacity-60">COMMON</span></a>
-  <ul class="menu menu-horizontal flex gap-4 font-semibold text-[1.1rem]">
+  <ul class="menu menu-horizontal flex gap-4 font-semibold text-[1.1rem] hidden">
     <li>
       <a href="/">Home</a>
     </li>
+    <li>
+      <a href="/">About</a>
+    </li>
     <li class="text-[1.1rem]">
       <details style="z-index: 1000;">
-        <summary class=""> Services</summary>
+        <summary class="">Services</summary>
         <ul class="p-2 bg-base-100 w-[420px] shadow-xl">
-          <li><a href="/">Workflow Automation</a></li>
-          <li><a href="/about/data-analytics-and-machine-learning">Data Analytics/Machine Learning</a></li>
-          <li><a href="/about/nlp">Natural Language Processing</a></li>
-          <li><a href="/about/generative-ai">Generative AI</a></li>
+          <li><a href="/capabilities/workflow-automation">Workflow Automation</a></li>
+          <li><a href="/capabilities/data-analytics-and-machine-learning">Data Analytics/Machine Learning</a></li>
+          <li><a href="/capabilities/nlp">Natural Language Processing</a></li>
+          <li><a href="/capabilities/generative-ai">Generative AI</a></li>
         </ul>
       </details>
     </li>
-    <li>
-      <a href="/">About</a>
+    <li class="text-[1.1rem]">
+      <details style="z-index: 1000;">
+        <summary class="">Capabilities</summary>
+        <ul class="p-2 bg-base-100 w-[420px] shadow-xl">
+          <li><a href="/capabilities/workflow-automation">Workflow Automation</a></li>
+          <li><a href="/capabilities/data-analytics-and-machine-learning">Data Analytics/Machine Learning</a></li>
+          <li><a href="/capabilities/nlp">Natural Language Processing</a></li>
+          <li><a href="/capabilities/generative-ai">Generative AI</a></li>
+        </ul>
+      </details>
     </li>
     <li>
       <a href="/">Work</a>
     </li>
   </ul>
-  <LinkButton>Let's Talk</LinkButton>
+  <LinkButton class="hidden">Let's Talk</LinkButton>
 </nav>

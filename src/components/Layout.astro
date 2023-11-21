@@ -20,9 +20,9 @@ const { pageTitle } = Astro.props
       rel="stylesheet"
     />
   </head>
-  <body class="bg-base-300 min-h-screen bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-transparent">
+  <body class="bg-base-300 min-h-screen min-w-screen bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-transparent">
     <Nav />
-    <main class="px-8 pb-20 mt-3 max-w-[1600px] mx-auto">
+    <main class="px-4 md:px-8 pb-20 md:mt-3 md:max-w-[1600px] mx-auto">
       <slot />
     </main>
     <Footer />

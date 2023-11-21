@@ -4,11 +4,11 @@ const { question, ...props } = Astro.props
 
 <div class="collapse collapse-arrow bg-base-200 join-item">
   <input type="radio" name="faqs" {...props} />
-  <div class="collapse-title text-lg font-medium">
+  <div class="collapse-title text-sm md:text-lg font-medium">
     {question}
   </div>
   <div class="collapse-content bg-base-300 prose max-w-full">
-    <p class="mt-4">
+    <p class="mt-4 text-sm md:text-base">
       <slot />
     </p>
   </div>
