@@ -1,0 +1,47 @@
+---
+import Brand from './Brand.astro'
+import NavLinks from './NavLinks.astro'
+import LinkButton from './forms/LinkButton.astro'
+---
+
+<div class="drawer">
+  <input id="mobile-menu" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content w-screen">
+    <slot />
+  </div>
+  <div class="drawer-side flex flex-col justify-between">
+    <label for="mobile-menu" aria-label="close sidebar" class="drawer-overlay"></label>
+    <div class="py-7 px-4 w-full min-h-full bg-base-200 text-base-content flex flex-col">
+      <div class="flex justify-between">
+        <div>
+          <Brand />
+        </div>
+        <div>
+          <label for="mobile-menu" class="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </label>
+        </div>
+      </div>
+      <div class="mt-8 p-0">
+        <NavLinks />
+      </div>
+      <div class="flex-1 flex mt-8">
+        <LinkButton class="w-full">Contact Us</LinkButton>
+      </div>
+      <div class="text-sm text-content opacity-80 text-center">@2023 Uncommon Pursuits, LLC.</div>
+    </div>
+  </div>
+</div>

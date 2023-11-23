@@ -3,6 +3,7 @@ import Nav from './Nav.astro'
 import Footer from './Footer.astro'
 import Brand from './Brand.astro'
 import NavLinks from './NavLinks.astro'
+import Drawer from './Drawer.astro'
 
 const { pageTitle } = Astro.props
 ---
@@ -23,45 +24,13 @@ const { pageTitle } = Astro.props
     />
   </head>
   <body class="bg-base-300 min-h-screen min-w-screen bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-transparent">
-    <div class="drawer drawer-end">
-      <input id="mobile-menu" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content w-screen">
-        <Nav />
-        <main class="px-4 md:px-8 pb-20 md:mt-3 md:max-w-[1600px] mx-auto">
-          <slot />
-        </main>
-        <Footer />
-      </div>
-      <div class="drawer-side">
-        <label for="mobile-menu" aria-label="close sidebar" class="drawer-overlay"></label>
-        <div class="py-7 px-4 w-full min-h-full bg-base-200 text-base-content">
-          <div class="flex justify-between">
-            <div>
-              <Brand />
-            </div>
-            <div>
-              <label for="mobile-menu" class="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </label>
-            </div>
-          </div>
-          <NavLinks />
-        </div>
-      </div>
-    </div>
+    <Drawer>
+      <Nav />
+      <main class="px-4 md:px-8 pb-20 md:mt-3 md:max-w-[1600px] mx-auto">
+        <slot />
+      </main>
+      <Footer />
+    </Drawer>
   </body>
 </html>
 
