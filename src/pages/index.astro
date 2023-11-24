@@ -1,4 +1,5 @@
 ---
+import CTABar from '@/components/CTABar.astro'
 import Layout from '@/components/Layout.astro'
 import PlatformCard from '@/components/PlatformCard.astro'
 import ProcessStep from '@/components/ProcessStep.astro'
@@ -7,15 +8,14 @@ import ServiceCard from '@/components/ServiceCard.astro'
 import ServiceExample from '@/components/ServiceExample.astro'
 import Study from '@/components/Study.astro'
 import StudyAlt from '@/components/StudyAlt.astro'
-import CTABar from '@/components/CTABar.astro'
 ---
 
 <Layout>
-  <section id="hero" class="rounded rounded-3xl bg-base-200">
+  <section id="hero" class="rounded rounded-3xl bg-black">
     <div
       class="p-8 py-12 md:px-24 rounded rounded-3xl flex flex-col lg:flex-row lg:min-h-[80vh] items-center shadow-lg items-middle"
     >
-      <div class="flex-1 md:mb-6 p-4 rounded-xl lg:backdrop-blur-[2px]">
+      <div class="flex-1 md:mb-6 p-4 lf:rounded-xl lg:backdrop-blur-[2px]">
         <h1 class="text-2xl md:text-4xl font-bold text-accent-content">
           Transforming businesses with AI-powered automation.
         </h1>
@@ -88,7 +88,7 @@ import CTABar from '@/components/CTABar.astro'
         data-aos-duration="600"
         data-aos-easing="ease-in-sine"
       >
-        <ServiceExample image="bg-opt-1.webp">
+        <ServiceExample image="bg-opt-2.webp">
           AI automation of sales outreach via HubSpot has streamlined client engagement, yielding higher conversion
           rates and more efficient lead management.
         </ServiceExample>
@@ -185,17 +185,18 @@ import CTABar from '@/components/CTABar.astro'
   <style>
     #hero {
       background-image: url('/images/background/hero-bg-2.webp');
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: cover;
     }
   </style>
 
   <script>
+    const scrollSpeed = window.innerWidth > 1024 ? 5 : 20
+
     window.addEventListener('scroll', function () {
       var scrollPosition = window.scrollY
       const elem = document.getElementById('hero')!
-      elem.style.setProperty('background-position-y', `-${scrollPosition / 1.55}px`)
+      elem.style.setProperty('background-position-y', `${scrollPosition / scrollSpeed}px`)
     })
   </script>
 </Layout>
