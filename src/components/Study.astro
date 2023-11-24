@@ -1,12 +1,12 @@
 ---
 import LinkButton from './forms/LinkButton.astro'
-const { image, heading, href } = Astro.props
+const { image, heading, linkText, href } = Astro.props
 ---
 
 <div class={`flex mt-16 justify-start`}>
   <div
     class={`background-motion w-[95%] h-[350px] bg-base-200 rounded-2xl shadow-xl bg-cover flex justify-end bg-cover md:bg-center`}
-    style={`background-image: url('/images/${image}')`}
+    style={`background-image: url('/images/background/${image}')`}
     data-aos="fade-in"
     data-aos-easing="ease-in-sine"
   >
@@ -20,7 +20,7 @@ const { image, heading, href } = Astro.props
         <slot />
       </p>
       <div class="text-right mt-4">
-        <LinkButton href={href} class="btn btn-ghost">Learn More</LinkButton>
+        <LinkButton href={href} class="btn btn-ghost">{linkText ?? 'Learn More'}</LinkButton>
       </div>
     </div>
   </div>

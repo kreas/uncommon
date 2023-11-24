@@ -15,7 +15,7 @@ import CTABar from '@/components/CTABar.astro'
     <div
       class="p-8 py-12 md:px-24 rounded rounded-3xl flex flex-col lg:flex-row lg:min-h-[80vh] items-center shadow-lg items-middle"
     >
-      <div class="flex-1 md:mb-6 backdrop-blur-[2px]">
+      <div class="flex-1 md:mb-6 p-4 rounded-xl lg:backdrop-blur-[2px]">
         <h1 class="text-2xl md:text-4xl font-bold text-accent-content">
           Transforming businesses with AI-powered automation.
         </h1>
@@ -88,16 +88,16 @@ import CTABar from '@/components/CTABar.astro'
         data-aos-duration="600"
         data-aos-easing="ease-in-sine"
       >
-        <ServiceExample image="bg-opt-1.png">
+        <ServiceExample image="bg-opt-1.webp">
           AI automation of sales outreach via HubSpot has streamlined client engagement, yielding higher conversion
           rates and more efficient lead management.
         </ServiceExample>
         <div class="flex-1 hidden lg:flex gap-8 flex-col">
-          <ServiceExample image="bg-opt-3.png">
+          <ServiceExample image="bg-opt-3.webp">
             AI-driven support automation has enhanced customer satisfaction by providing personalized assistance,
             significantly reducing resolution times.
           </ServiceExample>
-          <ServiceExample image="bg-opt-6.png">
+          <ServiceExample image="bg-opt-6.webp">
             Computer vision system enhances helps quality control by automating defect detection and improving overall
             production efficiency.
           </ServiceExample>
@@ -135,21 +135,32 @@ import CTABar from '@/components/CTABar.astro'
       evolving landscape.
     </SectionHeading>
 
-    <StudyAlt image="bg-studies-3.png" heading="Workflow Automation" href="/capabilities/workflow-automation">
+    <StudyAlt
+      image="bg-studies-3.webp"
+      heading="Workflow Automation"
+      linkText="Optimize Your Workflow"
+      href="/capabilities/workflow-automation"
+    >
       Boost your business productivity with Uncommon's advanced Workflow Automation. Use the latest features of
       Microsoft Power Platform, Databricks, Retool Workflow, and Zapier to simplify and optimize your business
       processes. Our solutions not only improve operational flexibility but also empower your team to stay ahead.
     </StudyAlt>
 
-    <Study image="bg-studies-4.png" heading="Generative AI" href="/capabilities/generative-ai">
+    <Study
+      image="bg-studies-4.webp"
+      heading="Generative AI"
+      linkText="Discover Gen-AI"
+      href="/capabilities/generative-ai"
+    >
       Harness the innovative power of Generative AI to pioneer new products, services, and experiences. Our technology
       interprets trends and generates novel concepts, turning the once-impossible into practical solutions that open up
       new avenues for business growth.
     </Study>
 
     <StudyAlt
-      image="bg-studies-7.png"
+      image="bg-studies-7.webp"
       heading="Data Analytics"
+      linkText="Unlock Deeper Insights"
       href="/capabilities/data-analytics-and-machine-learning"
     >
       Discover hidden layers of insight with our Data Analytics services. We delve beyond the surface to reveal not only
@@ -157,7 +168,12 @@ import CTABar from '@/components/CTABar.astro'
       strategies for your business.
     </StudyAlt>
 
-    <Study image="bg-studies-8.png" heading="Natural Language Processing" href="/capabilities/nlp">
+    <Study
+      image="bg-studies-8.webp"
+      linkText="Discover NLP"
+      heading="Natural Language Processing"
+      href="/capabilities/nlp"
+    >
       Transform your data into a wellspring of innovation with our Natural Language Processing expertise. By deciphering
       nuances and extracting key patterns from complex data, we empower you to pioneer new strategies and elevate your
       market solutions.
@@ -168,7 +184,7 @@ import CTABar from '@/components/CTABar.astro'
 
   <style>
     #hero {
-      background-image: url('/images/hero-bg-2.png');
+      background-image: url('/images/background/hero-bg-2.webp');
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: cover;
