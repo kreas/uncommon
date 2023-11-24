@@ -1,0 +1,99 @@
+---
+import Layout from '@/components/Layout.astro'
+import SectionHeading from '@/components/SectionHeading.astro'
+import Stat from '@/components/Stat.astro'
+---
+
+<Layout>
+  <section id="hero" class="container rounded rounded-3xl bg-base-200">
+    <div
+      class="p-8 py-12 md:p-24 rounded rounded-3xl flex flex-col lg:flex-row lg:min-h-[450px] items-center shadow-lg items-middle"
+    >
+      <div class="flex-1 backdrop-blur-[2px]">
+        <h1 class="text-2xl md:text-4xl font-bold text-accent-content">
+          Empower Your Business with Cutting-Edge AI Solutions
+        </h1>
+        <p class="text-shadow-xl md:text-lg mt-3 text-accent-content">
+          Unleash innovation, efficiency, and growth with our specialized services in Workflow Automation, Data
+          Analytics, NLP, and Generative AI.
+        </p>
+        <div class="mt-6 flex flex-col md:flex-row gap-4">
+          <a
+            href="/services"
+            class="btn btn-lg capitalize bg-accent-content text-base-300 rounded rounded-full hover:text-accent-content"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+      <div class="flex-1"></div>
+    </div>
+  </section>
+
+  <section class="container md:mt-36">
+    <SectionHeading heading="AI-Powered Automated Worfkflows Designed for Productive Businesses">
+      Our approach combines the advantages of advanced generative AI, robust cloud computing, sophisticated analytics,
+      and state-of-the-art natural language processing technologies. This enables us to convert challenges into smart,
+      automated solutions.
+    </SectionHeading>
+
+    <div class="stats flex mt-12 bg-base-100" data-aos="fade-in">
+      <Stat stat="1.5" uom="%">
+        The widespread use of generative AI is predicted to
+        <a href="https://www.investopedia.com/economic-impact-of-generative-ai-7976252" target="_blank" class="link">
+          increase global productivity by 1.5%
+        </a>
+         , adding $6 trillion to the global economy.
+      </Stat>
+      <Stat stat="40" uom="%">
+        Thse of generative AI shows a <a
+          href="https://mitsloan.mit.edu/ideas-made-to-matter/how-generative-ai-can-boost-highly-skilled-workers-productivity"
+          target="_blank"
+          class="link"
+        >
+          40% increase In productivity
+        </a> on average for highly skilled workers according to MIT Sloan.
+      </Stat>
+
+      <Stat stat="66" uom="%">
+        For most industries, there is an average increase in productivity. This is supported
+        <a href="https://www.nngroup.com/articles/ai-tools-productivity-gains/" target="_blank" class="link">
+          by independent studies.
+        </a>
+      </Stat>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  #hero {
+    background-image: url('/images/background/bg-hero-02.webp');
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<script>
+  const stats = document.querySelectorAll('.stat-value span')
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        let stat = 0
+        const targetStat = +stats[i].innerHTML // replace with your target number
+        const isFloat = targetStat % 1 !== 0
+
+        const interval = setInterval(() => {
+          if (stat < targetStat) {
+            isFloat ? (stat = parseFloat((stat + 0.1).toFixed(1))) : stat++
+            entry.target.textContent = stat
+          } else {
+            clearInterval(interval)
+          }
+        }, 30) // adjust the interval time as needed
+      }
+    })
+  })
+
+  stats.forEach((stat) => observer.observe(stat))
+</script>

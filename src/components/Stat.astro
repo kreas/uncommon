@@ -1,0 +1,18 @@
+---
+const { stat, uom } = Astro.props
+---
+
+<div class="stat text-center py-8 flex flex-col justify-start">
+  <div
+    class="stat-value text-6xl justify-center flex items-start"
+    data-aos="fade-in"
+    data-aos-delay="150"
+    data-aos-duration="5000"
+  >
+    <span class="stat-number">{stat}</span>{uom}
+  </div>
+  <div class="max-w-[350px] mx-auto mt-4">
+    <slot name="subheading" />
+    <slot />
+  </div>
+</div>
