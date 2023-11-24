@@ -86,6 +86,7 @@ import Stat from '@/components/Stat.astro'
         const interval = setInterval(() => {
           if (stat < targetStat) {
             isFloat ? (stat = parseFloat((stat + 0.1).toFixed(1))) : stat++
+            //@ts-ignore
             entry.target.textContent = stat
           } else {
             clearInterval(interval)
