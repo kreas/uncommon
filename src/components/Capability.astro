@@ -6,9 +6,9 @@ const { title, headline, readTime, publishDate, audio, backgroundImage } = Astro
 ---
 
 <div
-  class="max-w-[1400px] md:mx-auto flex flex-col flex-col-reverse md:flex-row-reverse gap-4 md:gap-12 relative md:mt-8"
+  class="max-w-[1400px] md:mx-auto flex flex-col flex-col-reverse xl:flex-row-reverse gap-4 md:gap-12 relative md:mt-8"
 >
-  <div class="md:w-3/4 mt-4 md:mt-0">
+  <div class="xl:w-3/4 mt-4 md:mt-0">
     <section class="prose flex-1 max-w-full text-sm md:text-base">
       <h1 class="leading-[130%] text-2xl md:text-4xl md:leading-[130%]">{headline}</h1>
 
@@ -22,11 +22,11 @@ const { title, headline, readTime, publishDate, audio, backgroundImage } = Astro
     <slot name="faqs" />
   </div>
   <div
-    class="shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] rounded-full md:rounded-xl bg-[url('/images/background/bg-square-01.png')] bg-cover bg-top-[30px] md:w-[500px] md:h-[300px] md:min-w-400 p-6 sticky top-[10px] md:top-[20px] justify-between flex flex-col gap-4"
+    class="shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] rounded-full md:rounded-xl bg-[url('/images/background/bg-square-01.png')] bg-cover bg-top-[30px] xl:w-[500px] xl:h-[300px] md:min-w-400 p-6 sticky top-[10px] md:top-[20px] justify-between flex flex-col gap-4"
     style={`background-image: url('${backgroundImage}')`}
   >
-    <div class="hidden">
-      <span class="text-white text-2xl md:text-3xl font-bold text-shadow-xl leading-[130%] text-opacity-80">
+    <div class="hidden md:block">
+      <span class="text-white text-2xl xl:text-3xl font-bold text-shadow-xl leading-[130%] text-opacity-80">
         {title}
       </span>
     </div>

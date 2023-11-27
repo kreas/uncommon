@@ -13,13 +13,13 @@ import StudyAlt from '@/components/StudyAlt.astro'
 <Layout>
   <section id="hero" class="rounded rounded-3xl bg-black">
     <div
-      class="p-8 py-12 md:px-24 rounded rounded-3xl flex flex-col lg:flex-row lg:min-h-[80vh] items-center shadow-lg items-middle"
+      class="p-4 md:p-8 md:py-12 xl:px-24 rounded rounded-3xl flex flex-col lg:flex-row md:min-h-[500px] xl:min-h-[80vh] items-center shadow-lg items-middle"
     >
       <div class="flex-1 md:mb-6 p-4 lf:rounded-xl lg:backdrop-blur-[2px]">
         <h1 class="text-2xl md:text-4xl font-bold text-accent-content">
           Transforming businesses with AI-powered automation.
         </h1>
-        <p class="md:text-lg mt-3 text-accent-content">
+        <p class="md:text-lg mt-3 text-accent-content font-semibold">
           Uncommon harnesses the transformative power of AI and advanced automation to revolutionize business
           operations. We deliver tailor-made, intelligent solutions that drive efficiency, innovation, and growth in a
           rapidly evolving digital landscape.
@@ -38,11 +38,11 @@ import StudyAlt from '@/components/StudyAlt.astro'
           </a>
         </div>
       </div>
-      <div class="flex-1"></div>
+      <div class="hidden xl:block flex-1"></div>
     </div>
   </section>
 
-  <section id="partners" class="text-center mt-20 md:mt-36 flex flex-col items-center">
+  <section id="partners" class="section-defaults text-center flex flex-col items-center">
     <SectionHeading heading="Elevating Innovation on the Top AI Platforms">
       Our approach combines the advantages of advanced generative AI, robust cloud computing, sophisticated analytics,
       and state-of-the-art natural language processing technologies. This enables us to convert challenges into smart,
@@ -61,13 +61,13 @@ import StudyAlt from '@/components/StudyAlt.astro'
     </div>
   </section>
 
-  <section id="services" class="mt-20 md:mt-36 flex flex-col max-w-[1400px] mx-auto">
+  <section id="services" class="section-defaults md:mt-36 flex flex-col max-w-[1400px] mx-auto">
     <SectionHeading heading="AI Solutions to Propel Your Business Forward">
       Uncommon builds intelligent automation solutions that redefine efficiency and drive competitive advantage.
       Leveraging the latest in AI technology, we turn cutting-edge concepts into real-world applications.
     </SectionHeading>
 
-    <div class="flex flex-col md:flex-row gap-16 mt-16">
+    <div class="flex flex-col md:flex-row gap-16 mt-4 lg:mt-16">
       <div class="flex-1 flex flex-col gap-4 lg:gap-8 lg:max-w-[600px]">
         <ServiceCard label="Automated Worklow Optimization" class="md:mr-20">
           Streamline your operations with our AI-driven workflow optimization, reducing costs and enhancing productivity
@@ -106,13 +106,13 @@ import StudyAlt from '@/components/StudyAlt.astro'
     </div>
   </section>
 
-  <section id="process" class="mt-20 md:mt-48">
+  <section id="process" class="section-defaults">
     <SectionHeading heading="Strategic AI Development">
       Empowering your growth with a meticulous and adaptive AI development process, we tailor cutting-edge solutions to
       meet your business needs, ensuring seamless integration today and scalable innovation for tomorrow."
     </SectionHeading>
 
-    <div class="flex flex-col md:flex-row gap-16 md:gap-24 mt-20 max-w-[1400px] mx-auto items-top">
+    <div class="flex flex-col md:flex-row gap-8 lg:gap-16 mx-auto items-top mt-8">
       <ProcessStep label="Planning">
         We begin with in-depth discovery to pinpoint your challenges and objectives, resulting in a detailed AI roadmap
         tailored to your business's unique landscape.
@@ -128,7 +128,7 @@ import StudyAlt from '@/components/StudyAlt.astro'
     </div>
   </section>
 
-  <section id="example-project" class="mt-20 md:mt-48 max-w-[1400px] mx-auto">
+  <section id="example-project" class="section-defaults mx-auto">
     <SectionHeading heading="Ways We Help Innovate">
       Our expertise in Generative AI, NLP, and Data Analytics allows us to develop innovative solutions that surpass
       industry standards. By using advanced technology and algorithms, we revolutionize business operations in today's

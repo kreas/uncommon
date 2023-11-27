@@ -1,10 +1,9 @@
 ---
 import LinkButton from './forms/LinkButton.astro'
-
 const { image, heading, linkText, href } = Astro.props
 ---
 
-<div class={`flex mt-16 justify-end`}>
+<div class={`flex mt-10 md:mt-16 justify-end`}>
   <div
     class={`background-motion w-[95%] h-[350px] bg-base-200 rounded-2xl shadow-xl bg-cover flex justify-start`}
     style={`background-image: url('/images/background/${image}')`}
@@ -12,7 +11,7 @@ const { image, heading, linkText, href } = Astro.props
     data-aos-easing="ease-in-sine"
   >
     <div
-      class={`study-inner bg-base-300 bg-opacity-95 backdrop-blur-[2px] h-[350px] w-full max-w-[800px] relative top-[20px] lg:top-[30px] left-[-20px] md:left-[-40px] lg:left-[-95px] p-8 rounded rounded-3xl shadow-xl flex flex-col justify-center`}
+      class={`study-inner bg-base-300 bg-opacity-95 backdrop-blur-[2px] h-[350px] w-full max-w-[800px] relative top-[20px] lg:top-[30px] left-[-20px] md:left-[-20px] lg:left-[-70px] p-8 rounded rounded-3xl shadow-xl flex flex-col justify-center`}
       data-aos={'fade-in'}
       data-aos-easing="ease-in-sine"
     >
